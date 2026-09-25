@@ -14,7 +14,6 @@
     --accent:#10b981;
     --accent-soft:rgba(16,185,129,0.1);
     --border:rgba(255,255,255,0.06);
-    --section-heading:#fff;
   }
 
   *{box-sizing:border-box;}
@@ -108,7 +107,7 @@
   main{flex:1;overflow-y:auto;padding-bottom:7rem;}
 
   /* ticker */
-  .ticker-wrap{padding:0.75rem 0;background:rgba(255,255,255,0.05);overflow:hidden;}
+  .ticker-wrap{padding:0.75rem 0;background:rgba(255,255,255,0.05);border-bottom:1px solid var(--border);overflow:hidden;}
   .ticker-track{display:flex;white-space:nowrap;width:max-content;}
   .ticker-item{display:flex;align-items:center;gap:1rem;padding:0 1.5rem;border-right:1px solid rgba(255,255,255,0.1);}
   .ticker-item .sym{font-size:10px;font-weight:900;letter-spacing:0.1em;color:#9ca3af;}
@@ -122,7 +121,7 @@
   .hero-scroll{display:flex;gap:1rem;overflow-x:auto;padding:0 1.5rem 1rem;}
   .hero-card{
     min-width:290px;position:relative;height:400px;border-radius:32px;overflow:hidden;
-    cursor:pointer;box-shadow:0 20px 35px -18px rgba(0,0,0,0.55);
+    cursor:pointer;box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);
     opacity:0;animation:fadeSlideIn .5s ease forwards;
   }
   .hero-card img{width:100%;height:100%;object-fit:cover;transition:transform 1s;}
@@ -198,7 +197,7 @@
   .podcast-scroll{display:flex;gap:1rem;overflow-x:auto;padding:0 1.5rem 1rem;}
   .podcast-card{
     min-width:280px;background:var(--surface);border-radius:32px;overflow:hidden;border:1px solid var(--border);
-    box-shadow:0 16px 28px -18px rgba(0,0,0,0.45);cursor:pointer;transition:transform .25s;
+    box-shadow:0 20px 40px -15px rgba(0,0,0,0.6);cursor:pointer;transition:transform .25s;
   }
   .podcast-card:hover{transform:translateY(-5px);}
   .podcast-art{position:relative;height:180px;}
@@ -331,33 +330,8 @@
   .tx-tab.active{background:var(--accent-soft);border-color:var(--accent);color:var(--accent);}
   .tx-tab-count{opacity:.65;margin-left:3px;}
   .tx-search-btn{flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:#9ca3af;}
-  .tx-close-btn{flex-shrink:0;width:36px;height:36px;border-radius:10px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:#9ca3af;cursor:pointer;}
   .tx-orders{padding:1.1rem 1.5rem 2rem;display:flex;flex-direction:column;gap:10px;}
   .tx-empty{padding:3rem 1.5rem;text-align:center;color:#6b7280;font-size:12.5px;}
-
-  /* ---------------- SETTINGS PAGE ---------------- */
-  .settings-scroll{padding-bottom:2rem;}
-  .settings-hero{padding:1.75rem 1.25rem 1.25rem;}
-  .settings-hero h1{margin:0;font-size:1.9rem;font-weight:900;letter-spacing:-0.02em;line-height:1.15;color:#fff;}
-  .settings-list{margin:0 1rem 1.5rem;background:var(--surface);border-radius:18px;overflow:hidden;}
-  .settings-row{display:flex;align-items:center;gap:14px;padding:15px 16px;cursor:pointer;background:none;border:none;width:100%;text-align:left;font-family:inherit;color:inherit;}
-  .settings-row:last-child{border-bottom:none;}
-  .settings-row:active{background:var(--surface-bright);}
-  .settings-row-icon{flex-shrink:0;width:22px;height:22px;display:flex;align-items:center;justify-content:center;color:var(--accent);}
-  .settings-row-label{flex:1;font-size:14.5px;font-weight:600;color:#f3f4f6;}
-  .settings-row-chevron{color:#4b5563;flex-shrink:0;}
-  .settings-row-chevron svg{width:18px;height:18px;}
-  .settings-links{padding:0.5rem 1.5rem 0.25rem;display:flex;flex-direction:column;gap:16px;}
-  .settings-link{background:none;border:none;padding:0;font-family:inherit;cursor:pointer;color:var(--accent);font-weight:700;font-size:13.5px;display:inline-flex;align-items:center;gap:6px;text-align:left;}
-  .settings-version{padding:1.25rem 1.5rem 2.5rem;color:#4b5563;font-size:11.5px;line-height:1.7;}
-
-  .settings-subpage-head{padding:1.25rem 1.25rem 0.75rem;}
-  .settings-back-btn{background:none;border:none;padding:0;margin-bottom:1.1rem;color:#e5e7eb;cursor:pointer;display:flex;}
-  .settings-subpage-head h1{margin:0 0 1.1rem;font-size:1.9rem;font-weight:900;letter-spacing:-0.02em;line-height:1.15;color:#fff;}
-  .settings-subpage-desc{margin:0;padding:0 1.25rem 1.25rem;color:#9ca3af;font-size:13.5px;line-height:1.55;border-bottom:1px solid var(--border);padding-bottom:1.5rem;}
-  .theme-segment{display:flex;flex-wrap:wrap;gap:10px;padding:1.25rem;}
-  .theme-pill{background:var(--surface-bright);border:none;border-radius:999px;padding:12px 20px;font-family:inherit;font-size:14px;font-weight:600;color:#e5e7eb;cursor:pointer;}
-  .theme-pill.active{background:var(--accent);color:#052e22;font-weight:800;}
   .tx-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:14px;cursor:pointer;}
   .tx-card:active{border-color:rgba(255,255,255,.16);}
   .tx-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;}
@@ -530,17 +504,6 @@
   .allm-tab.active{color:#000;background:var(--accent);border-color:var(--accent);}
   .allm-body{flex:1;overflow-y:auto;padding:1rem 1.5rem 1.25rem;}
   .allm-body::-webkit-scrollbar{display:none;}
-  .allm-tab-dropdown-wrap{position:relative;flex:1;}
-  .allm-tab-dropdown{width:100%;display:flex;align-items:center;justify-content:center;gap:6px;}
-  .allm-tab-dropdown-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .allm-tab-chevron{flex-shrink:0;transition:transform .15s;}
-  .allm-tab-dropdown.active .allm-tab-chevron{color:#000;}
-  .allm-lib-menu{position:absolute;top:calc(100% + 6px);left:0;right:0;background:#1a1a1d;border:1px solid var(--border);border-radius:10px;overflow:hidden;z-index:30;display:none;box-shadow:0 12px 30px -10px rgba(0,0,0,.7);}
-  .allm-lib-menu.open{display:block;}
-  .allm-lib-menu-item{display:block;width:100%;text-align:left;padding:11px 14px;font-size:12px;font-weight:700;color:#d1d5db;background:none;border:none;border-top:1px solid var(--border);font-family:inherit;cursor:pointer;}
-  .allm-lib-menu-item:first-child{border-top:none;}
-  .allm-lib-menu-item:hover{background:rgba(255,255,255,.06);}
-  .allm-lib-menu-item.active{color:var(--accent);}
   .allm-group{background:var(--surface);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden;}
   .allm-group-head{display:flex;align-items:center;gap:12px;padding:14px;cursor:pointer;}
   .allm-group-icon{width:32px;height:32px;border-radius:9px;background:var(--accent-soft);color:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
@@ -592,7 +555,7 @@
   .allm-chip.selected{color:var(--accent);border-color:rgba(16,185,129,.35);background:var(--accent-soft);}
   .allm-chip-dot{width:6px;height:6px;border-radius:50%;background:#6b7280;flex-shrink:0;}
   .allm-chip.selected .allm-chip-dot{background:var(--accent);}
-  .allm-input-row{display:flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 10px 6px 6px;}
+  .allm-input-row{display:flex;align-items:flex-end;gap:8px;background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:6px 10px 6px 6px;}
   .allm-input{flex:1;min-width:0;background:none;border:none;outline:none;resize:none;color:#fff;font-size:13px;font-family:inherit;font-weight:500;line-height:1.45;padding:6px 2px;max-height:40vh;overflow-y:hidden;}
   .allm-input::-webkit-scrollbar{width:0;height:0;}
   .allm-input::placeholder{color:#6b7280;}
@@ -657,106 +620,6 @@
   .nav-item.active .nav-indicator{opacity:1;}
 
   #app::-webkit-scrollbar{display:none;}
-
-  /* ================= LIGHT THEME ================= */
-  /* Applied via body[data-theme="light"]. Same structure/rationale as the
-     dark theme above — surfaces flip to white/near-white, borders flip to
-     a soft black tint, and text that was relying on the dark background
-     for contrast gets an explicit dark color. The green accent and every
-     colour used purely for meaning (up/down, status tints, badges) is
-     left as-is. */
-  body[data-theme="light"]{
-    --bg:#f7f7f7;
-    --surface:#ffffff;
-    --surface-bright:#ffffff;
-    --border:rgba(0,0,0,0.08);
-    --section-heading:#6b7280;
-    background:#e5e7eb;
-  }
-  body[data-theme="light"] .glass{background:rgba(255,255,255,0.85);}
-  body[data-theme="light"] .brand-text .name{color:#0b0f10;}
-  body[data-theme="light"] .icon-btn{color:#6b7280;}
-  body[data-theme="light"] .icon-btn:hover{color:#0b0f10;}
-  body[data-theme="light"] .interests-btn{background:#f7f7f7;border-color:rgba(0,0,0,0.14);color:#111827;}
-  body[data-theme="light"] .interests-btn:hover{background:#ececec;}
-  body[data-theme="light"] .cat-btn:hover{color:#374151;}
-
-  body[data-theme="light"] .ticker-wrap{background:rgba(0,0,0,0.035);}
-  body[data-theme="light"] .ticker-item{border-right-color:rgba(0,0,0,0.08);}
-  body[data-theme="light"] .hero-card{box-shadow:0 14px 26px -18px rgba(0,0,0,0.2);}
-  body[data-theme="light"] .podcast-card{box-shadow:0 10px 20px -16px rgba(0,0,0,0.18);}
-  body[data-theme="light"] .ticker-item .val{color:#0b0f10;}
-
-  body[data-theme="light"] .brand-text .name,
-  body[data-theme="light"] .cc-title,
-  body[data-theme="light"] .brief-title,
-  body[data-theme="light"] .podcast-title,
-  body[data-theme="light"] .tx-pair,
-  body[data-theme="light"] .od-title-main,
-  body[data-theme="light"] .od-status-title,
-  body[data-theme="light"] .allm-title,
-  body[data-theme="light"] .allm-empty-title,
-  body[data-theme="light"] .allm-group-label,
-  body[data-theme="light"] .allm-share-title,
-  body[data-theme="light"] .settings-hero h1,
-  body[data-theme="light"] .settings-subpage-head h1,
-  body[data-theme="light"] .settings-row-label{color:#0b0f10;}
-
-  body[data-theme="light"] .brief-author,
-  body[data-theme="light"] .tx-field-value,
-  body[data-theme="light"] .od-back,
-  body[data-theme="light"] .od-status-line,
-  body[data-theme="light"] .allm-msg.assistant,
-  body[data-theme="light"] .allm-msg.user.quoted,
-  body[data-theme="light"] .allm-msg.prompt,
-  body[data-theme="light"] .allm-msg.suggestion,
-  body[data-theme="light"] .allm-prompt-text,
-  body[data-theme="light"] .allm-input,
-  body[data-theme="light"] .allm-suggestion-text,
-  body[data-theme="light"] .allm-lib-menu-item,
-  body[data-theme="light"] .od-status-btn,
-  body[data-theme="light"] .tx-action-btn,
-  body[data-theme="light"] .theme-pill{color:#111827;}
-  body[data-theme="light"] .theme-pill.active{color:#052e22;}
-
-  body[data-theme="light"] .settings-subpage-desc{color:#4b5563;}
-  body[data-theme="light"] .settings-back-btn{color:#374151;}
-  body[data-theme="light"] .logo-badge .lb-rest{color:#111827;}
-
-  body[data-theme="light"] .tx-strategy{background:rgba(0,0,0,0.05);}
-  body[data-theme="light"] .tx-action-btn{background:rgba(0,0,0,0.045);}
-  body[data-theme="light"] .tx-action-btn:active{background:rgba(0,0,0,0.08);}
-  body[data-theme="light"] .tx-card:active{border-color:rgba(0,0,0,0.16);}
-
-  body[data-theme="light"] .tx-status.executed,
-  body[data-theme="light"] .tx-status.filled{color:#059669;}
-  body[data-theme="light"] .tx-status.cancelled{color:#dc2626;}
-  body[data-theme="light"] .tx-status.unallocated{color:#c2410c;}
-  body[data-theme="light"] .tx-status.pending{background:rgba(107,114,128,0.14);color:#4b5563;}
-  body[data-theme="light"] .tx-status.aggregated,
-  body[data-theme="light"] .tx-status.partially-filled{color:#1d4ed8;}
-  body[data-theme="light"] .tx-status.suspended{color:#374151;}
-  body[data-theme="light"] .tx-status.working{color:#b45309;}
-
-  body[data-theme="light"] nav{background:rgba(255,255,255,0.75);border-color:rgba(0,0,0,0.08);}
-  body[data-theme="light"] .side-drawer{background:#ffffff;border-right-color:rgba(0,0,0,0.08);}
-
-  body[data-theme="light"] .od-progress{background:rgba(0,0,0,0.08);}
-  body[data-theme="light"] .od-status-btn{background:rgba(0,0,0,0.045);}
-  body[data-theme="light"] .od-status-btn:active{background:rgba(0,0,0,0.08);}
-  body[data-theme="light"] .od-status-panel.cancelled{background:rgba(248,113,113,0.1);}
-
-  body[data-theme="light"] .allm-suggestion{background:rgba(0,0,0,0.04);}
-  body[data-theme="light"] .allm-suggestion-dismiss{background:rgba(0,0,0,0.06);}
-  body[data-theme="light"] .allm-plus-btn{background:rgba(0,0,0,0.05);color:#374151;}
-  body[data-theme="light"] .allm-icon-btn:hover{color:#0b0f10;}
-  body[data-theme="light"] .allm-lib-menu{background:#ffffff;box-shadow:0 12px 30px -10px rgba(0,0,0,0.2);}
-  body[data-theme="light"] .allm-lib-menu-item:hover{background:rgba(0,0,0,0.045);}
-  body[data-theme="light"] .allm-group-count{background:rgba(0,0,0,0.05);}
-  body[data-theme="light"] .allm-share-handle{background:rgba(0,0,0,0.15);}
-  body[data-theme="light"] .allm-share-close{background:rgba(0,0,0,0.06);}
-  body[data-theme="light"] .allm-share-action-icon{background:rgba(0,0,0,0.06);color:#111827;}
-
 </style>
 </head>
 <body>
@@ -921,7 +784,10 @@
   <header class="glass">
     <div class="header-top">
       <div class="header-left">
-        <div class="brand" onclick="showFeedPage();" style="cursor:pointer;">
+        <button class="icon-btn" id="hamburgerBtn" aria-label="Open branch menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <div class="brand">
           <div class="brand-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
           </div>
@@ -936,15 +802,12 @@
           <span>Interests</span>
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"></path></svg>
         </button>
-        <div class="icon-btn" id="ordersBtn" aria-label="Orders" onclick="showFXPage();" style="cursor:pointer;">
-          <svg width="19" height="19" viewBox="0 -960 960 960" fill="currentColor"><path d="m691-150 139-138-42-42-97 95-39-39-42 43 81 81ZM240-600h480v-80H240v80ZM720-40q-83 0-141.5-58.5T520-240q0-83 58.5-141.5T720-440q83 0 141.5 58.5T920-240q0 83-58.5 141.5T720-40ZM120-80v-680q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v267q-19-9-39-15t-41-9v-243H200v562h243q5 31 15.5 59T486-86l-6 6-60-60-60 60-60-60-60 60-60-60-60 60Zm120-200h203q3-21 9-41t15-39H240v80Zm0-160h284q38-37 88.5-58.5T720-520H240v80Zm-40 242v-562 562Z"></path></svg>
-        </div>
-        <div class="icon-btn" id="allmBtn" aria-label="ALLM" onclick="openALLM();" style="cursor:pointer;">
-          <svg width="19" height="19" viewBox="0 -960 960 960" fill="currentColor"><path d="M390-120q-51 0-88-35.5T260-241q-60-8-100-53t-40-106q0-21 5.5-41.5T142-480q-11-18-16.5-38t-5.5-42q0-61 40-105.5t99-52.5q3-51 41-86.5t90-35.5q26 0 48.5 10t41.5 27q18-17 41-27t49-10q52 0 89.5 35t40.5 86q59 8 99.5 53T840-560q0 22-5.5 42T818-480q11 18 16.5 38.5T840-400q0 62-40.5 106.5T699-241q-5 50-41.5 85.5T570-120q-25 0-48.5-9.5T480-156q-19 17-42 26.5t-48 9.5Zm130-590v460q0 21 14.5 35.5T570-200q20 0 34.5-16t15.5-36q-21-8-38.5-21.5T550-306q-10-14-7.5-30t16.5-26q14-10 30-7.5t26 16.5q11 16 28 24.5t37 8.5q33 0 56.5-23.5T760-400q0-5-.5-10t-2.5-10q-17 10-36.5 15t-40.5 5q-17 0-28.5-11.5T640-440q0-17 11.5-28.5T680-480q33 0 56.5-23.5T760-560q0-33-23.5-56T680-640q-11 18-28.5 31.5T613-587q-16 6-31-1t-20-23q-5-16 1.5-31t22.5-20q15-5 24.5-18t9.5-30q0-21-14.5-35.5T570-760q-21 0-35.5 14.5T520-710Zm-80 460v-460q0-21-14.5-35.5T390-760q-21 0-35.5 14.5T340-710q0 16 9 29.5t24 18.5q16 5 23 20t2 31q-6 16-21 23t-31 1q-21-8-38.5-21.5T279-640q-32 1-55.5 24.5T200-560q0 33 23.5 56.5T280-480q17 0 28.5 11.5T320-440q0 17-11.5 28.5T280-400q-21 0-40.5-5T203-420q-2 5-2.5 10t-.5 10q0 33 23.5 56.5T280-320q20 0 37-8.5t28-24.5q10-14 26-16.5t30 7.5q14 10 16.5 26t-7.5 30q-14 19-32 33t-39 22q1 20 16 35.5t35 15.5q21 0 35.5-14.5T440-250Zm40-230Z"></path></svg>
-        </div>
         <div class="icon-btn">
           <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </div>
+        <button class="icon-btn" id="settingsBtn" aria-label="Settings">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"></path></svg>
+        </button>
       </div>
     </div>
     <div class="cat-scroll no-scrollbar mask-fade-right" id="catScroll"></div>
@@ -1231,9 +1094,6 @@
       <button class="tx-search-btn" aria-label="Search orders">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
     </div>
     <div class="tx-orders" id="txOrders"></div>
   </main>
@@ -1244,9 +1104,6 @@
       <div class="tx-tabs no-scrollbar" id="fxtTabs"></div>
       <button class="tx-search-btn" aria-label="Search trades">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
     <div class="tx-orders" id="fxtTrades"></div>
@@ -1259,9 +1116,6 @@
       <button class="tx-search-btn" aria-label="Search">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
     </div>
     <div class="tx-orders" id="ortList"></div>
   </main>
@@ -1272,9 +1126,6 @@
       <div class="tx-tabs no-scrollbar" id="cdtTabs"></div>
       <button class="tx-search-btn" aria-label="Search">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-      </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
     </div>
     <div class="tx-orders" id="cdtList"></div>
@@ -1287,9 +1138,6 @@
       <button class="tx-search-btn" aria-label="Search">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
     </div>
     <div class="tx-orders" id="pbtList"></div>
   </main>
@@ -1301,33 +1149,8 @@
       <button class="tx-search-btn" aria-label="Search">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       </button>
-      <button class="tx-close-btn" aria-label="Close" onclick="showFeedPage();">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
     </div>
     <div class="tx-orders" id="eqtList"></div>
-  </main>
-
-  <!-- SETTINGS / MORE PAGE -->
-  <main class="no-scrollbar settings-scroll" id="settingsMain" style="display:none;">
-    <div class="settings-hero">
-      <h1>Welcome, <span id="settingsUserName">Joseph</span></h1>
-    </div>
-    <div class="settings-list" id="settingsList"></div>
-    <div class="settings-links" id="settingsLinks"></div>
-    <div class="settings-version" id="settingsVersion"></div>
-  </main>
-
-  <!-- THEME SUB-PAGE -->
-  <main class="no-scrollbar settings-scroll" id="themeMain" style="display:none;">
-    <div class="settings-subpage-head">
-      <button class="settings-back-btn" aria-label="Back to Settings" onclick="showSettingsPage();">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-      </button>
-      <h1>Select Theme</h1>
-    </div>
-    <p class="settings-subpage-desc">Select between Dark or Light themes depending on your preference. Alternatively, you can select 'Device Default' and this will apply the theme based on your device settings.</p>
-    <div class="theme-segment" id="themeOptions"></div>
   </main>
 
   <!-- BOTTOM NAV -->
@@ -1649,14 +1472,7 @@ const ICONS = {
   bookmark: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>',
   play: '<svg width="24" height="24" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>',
   arrowUpRight: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>',
-  chevronRight: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>',
-  stAccount: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="10" r="3"></circle><path d="M6.5 19c1-2.5 3-4 5.5-4s4.5 1.5 5.5 4"></path></svg>',
-  stInterests: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2.05V17h6v-.25c0-.85.4-1.55 1-2.05A7 7 0 0 0 12 2Z"></path></svg>',
-  stAlarm: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l3 2"></path><path d="M5 3 2 6"></path><path d="M22 6l-3-3"></path></svg>',
-  stBell: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 4 1.5 6 2 6H4c.5 0 2-2 2-6Z"></path><path d="M10 21a2 2 0 0 0 4 0"></path></svg>',
-  stHelp: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a2.5 2.5 0 0 1 4.9.8c0 1.6-2.4 1.8-2.4 3.4"></path><line x1="12" y1="17" x2="12" y2="17.01"></line></svg>',
-  stTheme: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"></path></svg>',
-  stExternal: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>'
+  chevronRight: '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>'
 };
 
 const badgeClass = c => c.includes('CREDIT') ? 'badge-blue' : c.includes('SALES') ? 'badge-orange' : c.includes('FX') ? 'badge-indigo' : c.includes('FI') ? 'badge-pink' : c.includes('PB') ? 'badge-pborange' : c.includes('EQ') ? 'badge-eqblue' : 'badge-emerald';
@@ -1802,9 +1618,9 @@ function renderGridSections(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -1812,77 +1628,12 @@ function renderGridSections(){
     </div>`).join('');
 }
 
-/* ---------------- SETTINGS PAGE ---------------- */
-const SETTINGS_ITEMS = [
-  { key:'account', label:'Account', icon: ICONS.stAccount },
-  { key:'interests', label:'Interests', icon: ICONS.stInterests },
-  { key:'morning', label:'Morning Brief Topics', icon: ICONS.stAlarm },
-  { key:'notifications', label:'Email & Notifications', icon: ICONS.stBell },
-  { key:'help', label:'Help & Support', icon: ICONS.stHelp },
-  { key:'theme', label:'Theme', icon: ICONS.stTheme, action: showThemePage }
-];
-
-const SETTINGS_LINKS = [
-  { label:'Terms of Use', external:false },
-  { label:'Privacy Policy', external:true },
-  { label:'Cookie Policy', external:true }
-];
-
-function renderSettingsPage(){
-  document.getElementById('settingsList').innerHTML = SETTINGS_ITEMS.map((item,idx) => `
-    <button class="settings-row" type="button" data-idx="${idx}">
-      <span class="settings-row-icon">${item.icon}</span>
-      <span class="settings-row-label">${item.label}</span>
-      <span class="settings-row-chevron">${ICONS.chevronRight}</span>
-    </button>`).join('');
-  document.querySelectorAll('#settingsList .settings-row').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = SETTINGS_ITEMS[+btn.dataset.idx];
-      if (item && typeof item.action === 'function') item.action();
-    });
-  });
-
-  document.getElementById('settingsLinks').innerHTML = SETTINGS_LINKS.map(link => `
-    <button class="settings-link" type="button">${link.label}${link.external ? ' ' + ICONS.stExternal : ''}</button>`).join('');
-
-  document.getElementById('settingsVersion').innerHTML =
-    `Version 3.0.2<br>TBN Bank\u00ae - ${new Date().getFullYear()}. All rights reserved.`;
-}
-
-/* ---------------- THEME SUB-PAGE ---------------- */
-const THEME_OPTIONS = ['Dark', 'Light', 'Device Default'];
-let selectedTheme = 'Dark';
-
-function resolveTheme(name){
-  if (name === 'Dark') return 'dark';
-  if (name === 'Light') return 'light';
-  // Device Default: approximate "sun up / sun down" as a 06:00–18:00 daytime window.
-  const hour = new Date().getHours();
-  return (hour >= 6 && hour < 18) ? 'light' : 'dark';
-}
-
-function applyTheme(){
-  document.body.setAttribute('data-theme', resolveTheme(selectedTheme));
-}
-
-function renderThemeOptions(){
-  document.getElementById('themeOptions').innerHTML = THEME_OPTIONS.map(opt => `
-    <button class="theme-pill ${opt === selectedTheme ? 'active' : ''}" type="button" data-theme="${opt}">${opt}</button>`).join('');
-  document.querySelectorAll('#themeOptions .theme-pill').forEach(btn => {
-    btn.addEventListener('click', () => {
-      selectedTheme = btn.dataset.theme;
-      renderThemeOptions();
-      applyTheme();
-    });
-  });
-}
-
 const NAV_ITEMS = [
   { key:'My Feed', label:'Feed', icon: ICONS.layoutGrid },
   { key:'Forecasts', label:'Markets', icon: ICONS.trendingUp },
   { key:'Discover', label:'Explore', icon: ICONS.compass },
   { key:'Podcasts', label:'Audio', icon: ICONS.mic },
-  { key:'More', label:'More', icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"></circle><circle cx="19" cy="12" r="1.5" fill="currentColor" stroke="none"></circle></svg>' }
+  { key:'ALLM', label:'ALLM', icon: ICONS.neurology }
 ];
 
 function renderNav(){
@@ -1896,8 +1647,7 @@ function renderNav(){
     btn.addEventListener('click', ()=>{
       activeTab = btn.dataset.tab;
       renderNav();
-      if (activeTab === 'My Feed') showFeedPage();
-      if (activeTab === 'More') showSettingsPage();
+      if (activeTab === 'ALLM') openALLM();
     });
   });
 }
@@ -1971,68 +1721,7 @@ const BRANCH_SKILLS = {
 };
 
 function getAllmLibrary(){
-  return BRANCH_SKILLS[getAllmContextKey()] || ALLM_LIBRARY_GENERIC;
-}
-
-/* ALLM's context (subtitle, colour, Skills Library) should reflect whichever
-   carousel tab is active within a blotter page — not just the page itself —
-   so switching the FX Trades / My Orders / IX Orders tab and opening ALLM
-   shows that tab's context. Pages without a carousel (feed, cd, pb, eq) just
-   reflect themselves, as before. */
-const ALLM_TAB_CONTEXT = { fx:'fx', orders:'or', ix:'fi' };
-
-function getAllmContextKey(){
-  if (currentPageKey === 'fi') return ALLM_TAB_CONTEXT[txActiveTab] || 'fi';
-  if (currentPageKey === 'fx') return ALLM_TAB_CONTEXT[fxtActiveTab] || 'fx';
-  if (currentPageKey === 'or') return ALLM_TAB_CONTEXT[BLOTTERS.or.active] || 'or';
-  return currentPageKey;
-}
-
-/* Skills Library category filter — lets the person browse any category's
-   skills manually, independent of the auto-detected context above. */
-const ALLM_LIB_CATEGORIES = [
-  { key:'all',   label:'All categories' },
-  { key:'feed',  label:'Markets 100' },
-  { key:'fx',    label:'FX' },
-  { key:'or',    label:'Orders' },
-  { key:'fi',    label:'IX Orders' }
-];
-
-/* Shorter labels shown on the toggle itself once a category is selected
-   (the dropdown list keeps the fuller names above). */
-const ALLM_TOGGLE_LABELS = {
-  all:  'All Skills',
-  feed: 'Market 100 Skills',
-  fx:   'FX Skills',
-  or:   'Orders Skills',
-  fi:   'IX Skills'
-};
-
-function getLibraryForCategory(key){
-  if (key === 'feed') return ALLM_LIBRARY_GENERIC;
-  return BRANCH_SKILLS[key] || ALLM_LIBRARY_GENERIC;
-}
-
-function getAllmLibraryAll(){
-  const seen = new Map();
-  [ALLM_LIBRARY_GENERIC, BRANCH_SKILLS.fx, BRANCH_SKILLS.or, BRANCH_SKILLS.fi].forEach(lib=>{
-    (lib || []).forEach(g => { if (!seen.has(g.key)) seen.set(g.key, g); });
-  });
-  return Array.from(seen.values());
-}
-
-/* What the Skills Library tab actually displays: the manually-picked
-   category if one is selected, otherwise the auto-detected context. */
-function getAllmDisplayLibrary(){
-  if (allmLibraryFilter === 'all') return getAllmLibraryAll();
-  if (allmLibraryFilter) return getLibraryForCategory(allmLibraryFilter);
-  return getAllmLibrary();
-}
-
-function getAllmDisplayFilterKey(){
-  if (allmLibraryFilter) return allmLibraryFilter;
-  const ctx = getAllmContextKey();
-  return ALLM_LIB_CATEGORIES.some(c => c.key === ctx) ? ctx : 'all';
+  return BRANCH_SKILLS[currentPageKey] || ALLM_LIBRARY_GENERIC;
 }
 
 // TX is a holding branch pending stakeholder sign-off; it may absorb FX once
@@ -2042,7 +1731,6 @@ BRANCH_SKILLS.or = BRANCH_SKILLS.fx; // My Orders uses the blotter-focused skill
 
 let activeAllmTab = 'conversation';
 let allmOpenGroup = null;
-let allmLibraryFilter = null; // null = auto (follows the active carousel context); otherwise 'all'|'feed'|'fx'|'or'|'fi'
 let allmSelectedLabel = null;
 let allmSelectedIsTextCapture = false;
 let allmMessages = [];
@@ -2062,16 +1750,14 @@ let allmLastOpenedBranch = null;
 function openALLM(){
   document.getElementById('allmScrim').classList.add('open');
   document.getElementById('allmSheet').classList.add('open');
-  const contextKey = getAllmContextKey();
-  document.getElementById('allmSubtitle').textContent = (typeof PAGES !== 'undefined' && PAGES[contextKey]) ? PAGES[contextKey].sub : 'AI Assistant';
-  const c = (typeof BRAND_COLORS !== 'undefined' && BRAND_COLORS[contextKey]) ? BRAND_COLORS[contextKey] : { bg:'#10b981', glow:'16,185,129' };
+  document.getElementById('allmSubtitle').textContent = (typeof PAGES !== 'undefined' && PAGES[currentPageKey]) ? PAGES[currentPageKey].sub : 'AI Assistant';
+  const c = (typeof BRAND_COLORS !== 'undefined' && BRAND_COLORS[currentPageKey]) ? BRAND_COLORS[currentPageKey] : { bg:'#10b981', glow:'16,185,129' };
   const headIcon = document.getElementById('allmHeadIcon');
   headIcon.style.background = c.bg;
   headIcon.style.boxShadow = `0 8px 18px -6px rgba(${c.glow},0.5)`;
-  if (contextKey !== allmLastOpenedBranch){
+  if (currentPageKey !== allmLastOpenedBranch){
     allmOpenGroup = null;
-    allmLibraryFilter = null;
-    allmLastOpenedBranch = contextKey;
+    allmLastOpenedBranch = currentPageKey;
     allmSuggestionDismissed = false;
   }
   if (capturedSelectionText){
@@ -2150,60 +1836,18 @@ function closeALLM(){
 }
 
 function renderAllmTabs(){
-  const filterKey = getAllmDisplayFilterKey();
-  const catLabel = ALLM_TOGGLE_LABELS[filterKey] || 'All Skills';
   document.getElementById('allmTabs').innerHTML = `
-    <button class="allm-tab" data-allmtab="conversation">Conversation</button>
-    <div class="allm-tab-dropdown-wrap">
-      <button class="allm-tab allm-tab-dropdown" id="allmLibToggleBtn">
-        <span class="allm-tab-dropdown-label">${catLabel}</span>
-        <svg class="allm-tab-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </button>
-      <div class="allm-lib-menu" id="allmLibMenu">
-        ${ALLM_LIB_CATEGORIES.map(c => `<button class="allm-lib-menu-item${c.key===filterKey?' active':''}" data-cat="${c.key}">${c.label}</button>`).join('')}
-      </div>
-    </div>`;
-  document.querySelectorAll('.allm-tab').forEach(el => el.classList.toggle('active', el.dataset.allmtab === activeAllmTab));
-  document.getElementById('allmLibToggleBtn').classList.toggle('active', activeAllmTab === 'library');
-  document.querySelector('[data-allmtab="conversation"]').addEventListener('click', ()=>{
-    document.getElementById('allmLibMenu').classList.remove('open');
-    activeAllmTab = 'conversation';
-    renderAllmTabs();
-    renderAllmBody();
-  });
-  document.getElementById('allmLibToggleBtn').addEventListener('click', (e)=>{
-    e.stopPropagation();
-    if (activeAllmTab !== 'library'){
-      activeAllmTab = 'library';
-      renderAllmTabs();
-      renderAllmBody();
-    } else {
-      document.getElementById('allmLibMenu').classList.toggle('open');
-    }
-  });
-  document.querySelectorAll('.allm-lib-menu-item').forEach(item=>{
-    item.addEventListener('click', (e)=>{
-      e.stopPropagation();
-      allmLibraryFilter = item.dataset.cat;
-      activeAllmTab = 'library';
-      allmOpenGroup = null;
-      renderAllmTabs();
-      renderAllmBody();
-    });
+    <button class="allm-tab ${activeAllmTab==='conversation'?'active':''}" data-allmtab="conversation">Conversation</button>
+    <button class="allm-tab ${activeAllmTab==='library'?'active':''}" data-allmtab="library">Skills Library</button>`;
+  document.querySelectorAll('.allm-tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{ activeAllmTab = btn.dataset.allmtab; renderAllmTabs(); renderAllmBody(); });
   });
 }
-document.addEventListener('click', (e)=>{
-  const menu = document.getElementById('allmLibMenu');
-  const wrap = document.querySelector('.allm-tab-dropdown-wrap');
-  if (menu && menu.classList.contains('open') && wrap && !wrap.contains(e.target)){
-    menu.classList.remove('open');
-  }
-});
 
 function renderAllmBody(){
   const body = document.getElementById('allmBody');
   if (activeAllmTab === 'library'){
-    const library = getAllmDisplayLibrary();
+    const library = getAllmLibrary();
     body.innerHTML = library.map(g => `
       <div class="allm-group ${allmOpenGroup===g.key?'open':''}" data-group="${g.key}">
         <div class="allm-group-head" data-grouphead="${g.key}">
@@ -2979,9 +2623,9 @@ function renderFXGrid(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -3156,9 +2800,9 @@ function renderFIGrid(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -3303,9 +2947,9 @@ function renderCDGrid(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -3440,9 +3084,9 @@ function renderPBGrid(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -3623,9 +3267,9 @@ function renderEQGrid(){
       <div class="sec-head" style="padding:0;margin-bottom:1.5rem;">
         <div style="display:flex;align-items:center;gap:12px;">
           <div class="dot-live" style="background:${s.color}"></div>
-          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:var(--section-heading,#fff);text-transform:uppercase;margin:0;">${s.label}</h2>
+          <h2 style="font-size:11px;font-weight:900;letter-spacing:0.15em;color:#fff;text-transform:uppercase;margin:0;">${s.label}</h2>
         </div>
-        <button class="sec-link" style="color:#4b5563;">View All</button>
+        <button class="sec-link" style="color:#4b5563;border-bottom:1px solid #111;padding-bottom:2px;">View All</button>
       </div>
       <div class="grid-scroll no-scrollbar mask-fade-right">
         ${s.items.map(contentCard).join('')}
@@ -3636,6 +3280,7 @@ function renderEQGrid(){
 const TX_TABS = [
   { key:'fx',      label:'FX Trades', count:47 },
   { key:'orders',  label:'My Orders', count:61 },
+  { key:'options', label:'My Options', count:0 },
   { key:'ix',      label:'IX Orders', count:13 }
 ];
 let txActiveTab = 'ix';
@@ -3667,10 +3312,12 @@ function renderTXTabs(){
   });
 }
 
-/* Single shared card-list renderer for the IX Orders (Fi) blotter — reused wherever
-   the "IX Orders" tab is cross-linked from a different page's carousel. */
-function renderTXOrderCards(elId){
-  const el = document.getElementById(elId);
+function renderTXOrders(){
+  const el = document.getElementById('txOrders');
+  if (txActiveTab !== 'ix'){
+    el.innerHTML = `<div class="tx-empty">No orders to show in this view yet.</div>`;
+    return;
+  }
   el.innerHTML = TX_ORDERS.map(o => {
     const expanded = txExpandedId === o.id;
     return `
@@ -3713,26 +3360,13 @@ function renderTXOrderCards(elId){
       </div>` : ``}
     </div>`;
   }).join('');
-  el.querySelectorAll('.tx-card').forEach(card=>{
+  document.querySelectorAll('#txOrders .tx-card').forEach(card=>{
     card.addEventListener('click', ()=>{
       const id = card.dataset.id;
       txExpandedId = (txExpandedId === id) ? null : id;
-      renderTXOrderCards(elId);
+      renderTXOrders();
     });
   });
-}
-
-function renderTXOrders(){
-  const el = document.getElementById('txOrders');
-  if (txActiveTab === 'orders'){
-    renderBlotterRows('or', 'txOrders');
-    return;
-  }
-  if (txActiveTab !== 'ix'){
-    el.innerHTML = `<div class="tx-empty">No orders to show in this view yet.</div>`;
-    return;
-  }
-  renderTXOrderCards('txOrders');
 }
 
 
@@ -3740,6 +3374,7 @@ function renderTXOrders(){
 const FXT_TABS = [
   { key:'fx',      label:'FX Trades', count:132 },
   { key:'orders',  label:'My Orders', count:61 },
+  { key:'options', label:'My Options', count:0 },
   { key:'ix',      label:'IX Orders', count:13 }
 ];
 let fxtActiveTab = 'fx';
@@ -3774,14 +3409,6 @@ function renderFXTTabs(){
 
 function renderFXTrades(){
   const el = document.getElementById('fxtTrades');
-  if (fxtActiveTab === 'orders'){
-    renderBlotterRows('or', 'fxtTrades');
-    return;
-  }
-  if (fxtActiveTab === 'ix'){
-    renderTXOrderCards('fxtTrades');
-    return;
-  }
   if (fxtActiveTab !== 'fx'){
     el.innerHTML = `<div class="tx-empty">No trades to show in this view yet.</div>`;
     return;
@@ -4261,7 +3888,7 @@ function orRow(o){
           ['Fill', `<span class="od-pill-toggle">${o.aon ? '<span class="od-pill active">All or Nothing</span> Partial Fill' : 'All or Nothing <span class="od-pill active">Partial Fill</span>'}</span>`, true],
           ['Expiry', `<span class="od-value-row"><span class="od-checkbox"></span>${o.expiry}</span>`], ['Link Type', o.link || '<span class="od-placeholder">None</span>'] ]},
         { title:'Booking', fields:[
-          ['Account', `<span class="od-value-row">TBN Arbitrage (TBNBPAR) ${CHEVRON_ICON}</span>`, true],
+          ['Account', `<span class="od-value-row">TBN Bank Arbitrage (BNABPAR) ${CHEVRON_ICON}</span>`, true],
           ['Sub Account', `<span class="od-value-row">B2B - None ${CHEVRON_ICON}</span>`], ['Trading Entity', `<span class="od-value-row">TBN Bank ${CHEVRON_ICON}</span>`],
           ['Comment', o.comment || '<span class="od-placeholder">—</span>', true],
           ['Client Reference', `<span class="od-value-row od-placeholder">Specify Client Reference ${CHEVRON_ICON}</span>`, true],
@@ -4291,7 +3918,7 @@ const OR_ROWS = [
 const HISTORY_ICON = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>`;
 const BLOTTERS = {
   or: { tabsEl:'ortTabs', listEl:'ortList', dataTab:'orders', active:'orders', expanded:null, rows:OR_ROWS,
-        tabs:[{key:'orders',label:'My Orders',count:OR_ROWS.length},{key:'fx',label:'FX Trades',count:132},{key:'ix',label:'IX Orders',count:13}],
+        tabs:[{key:'orders',label:'My Orders',count:OR_ROWS.length},{key:'fx',label:'FX Trades',count:132},{key:'options',label:'My Options',count:0},{key:'ix',label:'IX Orders',count:13}],
         footer: r => `<button class="od-footer-action">${COPY_ICON} Duplicate</button><button class="od-footer-action" style="opacity:.4;cursor:default;">${COPY_ICON} Copy</button><button class="od-footer-action">${HISTORY_ICON} Order History</button><label class="od-footer-action" style="margin-left:auto;gap:6px;"><span class="od-checkbox" style="margin:0;${r.pending === 'Yes' ? 'background:var(--accent);border-color:var(--accent);' : ''}"></span>Pending</label>` },
   cd: { tabsEl:'cdtTabs', listEl:'cdtList', dataTab:'cds', active:'cds', expanded:null, rows:CD_ROWS,
         tabs:[{key:'cds',label:'CDS Trades',count:86},{key:'rfq',label:'My RFQs',count:24},{key:'axes',label:'Axes',count:9},{key:'bonds',label:'Bonds',count:0}],
@@ -4313,12 +3940,10 @@ function renderBlotterTabs(key){
   });
 }
 
-/* Single shared card-list renderer — used for every blotter (or/cd/pb/eq) and reused
-   wherever a "My Orders" (or other blotter) tab is cross-linked from a different page,
-   so there is only ever the one implementation of each blotter's carousel content. */
-function renderBlotterRows(key, elId){
+function renderBlotterList(key){
   const b = BLOTTERS[key];
-  const el = document.getElementById(elId);
+  const el = document.getElementById(b.listEl);
+  if (b.active !== b.dataTab){ el.innerHTML = `<div class="tx-empty">Nothing to show in this view yet.</div>`; return; }
   el.innerHTML = b.rows.map(r => {
     const expanded = b.expanded === r.id;
     return `
@@ -4354,15 +3979,8 @@ function renderBlotterRows(key, elId){
     </div>`;
   }).join('');
   el.querySelectorAll('.tx-card').forEach(card=>{
-    card.addEventListener('click', ()=>{ b.expanded = (b.expanded === card.dataset.id) ? null : card.dataset.id; renderBlotterRows(key, elId); });
+    card.addEventListener('click', ()=>{ b.expanded = (b.expanded === card.dataset.id) ? null : card.dataset.id; renderBlotterList(key); });
   });
-}
-
-function renderBlotterList(key){
-  const b = BLOTTERS[key];
-  if (b.active === 'ix'){ renderTXOrderCards(b.listEl); return; }
-  if (b.active !== b.dataTab){ document.getElementById(b.listEl).innerHTML = `<div class="tx-empty">Nothing to show in this view yet.</div>`; return; }
-  renderBlotterRows(key, b.listEl);
 }
 
 function buildBlotterDetailBody(r){
@@ -4429,24 +4047,21 @@ const PAGES = {
   or:   { el: 'ortMain', sub: 'My Orders', cats: [] },
   cd:   { el: 'cdtMain', sub: 'Credit', cats: [] },
   pb:   { el: 'pbtMain', sub: 'Private Banking', cats: [] },
-  eq:   { el: 'eqtMain', sub: 'Equities', cats: [] },
-  more: { el: 'settingsMain', sub: 'Settings', cats: [] },
-  theme:{ el: 'themeMain', sub: 'Theme', cats: [] }
+  eq:   { el: 'eqtMain', sub: 'Equities', cats: [] }
 };
 
 const BRAND_COLORS = {
   feed: { bg:'#10b981', glow:'16,185,129'  },
   fx:   { bg:'#818cf8', glow:'129,140,248' },
   fi:   { bg:'#f472b6', glow:'244,114,182' },
-  or:   { bg:'#9ca3af', glow:'156,163,175' },
+  or:   { bg:'#facc15', glow:'250,204,21' },
   cd:   { bg:'#a78bfa', glow:'167,139,250' },
   pb:   { bg:'#fb923c', glow:'251,146,60'  },
-  eq:   { bg:'#60a5fa', glow:'96,165,250'  },
-  more: { bg:'#10b981', glow:'16,185,129'  }
+  eq:   { bg:'#60a5fa', glow:'96,165,250'  }
 };
 
 function showPage(pageKey){
-  ['main','fxMain','fiMain','cdMain','pbMain','eqMain','txMain','fxTradesMain','cdtMain','pbtMain','eqtMain','ortMain','settingsMain','themeMain'].forEach(id => document.getElementById(id).style.display = 'none');
+  ['main','fxMain','fiMain','cdMain','pbMain','eqMain','txMain','fxTradesMain','cdtMain','pbtMain','eqtMain','ortMain'].forEach(id => document.getElementById(id).style.display = 'none');
   const page = PAGES[pageKey];
   document.getElementById(page.el).style.display = 'block';
   document.getElementById('headerSub').textContent = page.sub;
@@ -4462,8 +4077,6 @@ function showCDPage(){ showPage('cd'); }
 function showPBPage(){ showPage('pb'); }
 function showEQPage(){ showPage('eq'); }
 function showFeedPage(){ showPage('feed'); }
-function showSettingsPage(){ showPage('more'); }
-function showThemePage(){ showPage('theme'); }
 
 function openDrawer(){
   document.getElementById('sideDrawer').classList.add('open');
@@ -4475,6 +4088,7 @@ function closeDrawer(){
   document.getElementById('drawerScrim').classList.remove('open');
   document.getElementById('app').classList.remove('pushed');
 }
+document.getElementById('hamburgerBtn').addEventListener('click', openDrawer);
 document.getElementById('drawerScrim').addEventListener('click', closeDrawer);
 
 renderCategories();
@@ -4518,9 +4132,6 @@ renderEQGrid();
 initTXPage();
 initFXTradesPage();
 initBranchBlotters();
-renderSettingsPage();
-renderThemeOptions();
-applyTheme();
 
 /* Desktop/mouse support for the horizontal carousels & tab strips.
    These only had native touch/trackpad scrolling, which doesn't work with
