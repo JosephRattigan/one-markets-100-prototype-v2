@@ -2273,7 +2273,7 @@ function renderAllmBody(){
             const shareIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4"></path><path d="M7 9l5-5 5 5"></path><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"></path></svg>';
             const refreshIcon = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>';
             return `<div class="allm-answer-group">
-              <div class="allm-msg answer">${m.text}<div class="allm-caveat">*BNPP is not responsible for the model's responses*</div></div>
+              <div class="allm-msg answer">${m.text}<div class="allm-caveat">*TBN Bank is not responsible for the model's responses*</div></div>
               <div class="allm-answer-actions">
                 <button class="allm-icon-action" data-msgindex="${i}" data-action="copy" aria-label="Copy">${copyIcon}</button>
                 <button class="allm-icon-action" data-msgindex="${i}" data-action="share" aria-label="Share">${shareIcon}</button>
@@ -3904,7 +3904,7 @@ function buildOrderDetailBody(o){
       <div class="od-grid">
         <div><div class="tx-field-label">Account</div><div class="tx-field-value od-value-row">BZURI ${CHEVRON_ICON}</div></div>
         <div><div class="tx-field-label">Sub Account</div><div class="tx-field-value od-value-row">None ${CHEVRON_ICON}</div></div>
-        <div class="full"><div class="tx-field-label">Trading Entity</div><div class="tx-field-value od-value-row">BNP Paribas ${CHEVRON_ICON}</div></div>
+        <div class="full"><div class="tx-field-label">Trading Entity</div><div class="tx-field-value od-value-row">TBN Bank ${CHEVRON_ICON}</div></div>
         <div class="full"><div class="tx-field-label">Comment</div><div class="tx-field-value od-placeholder">—</div></div>
         <div class="full"><div class="tx-field-label">Client Reference</div><div class="tx-field-value od-value-row od-placeholder">Specify Client Reference ${CHEVRON_ICON}</div></div>
       </div>
@@ -4009,7 +4009,7 @@ function buildTradeDetailBody(t){
       <div class="od-card-title">Booking</div>
       <div class="od-grid">
         <div><div class="tx-field-label">Account</div><div class="tx-field-value od-value-row od-placeholder">None ${CHEVRON_ICON}</div></div>
-        <div><div class="tx-field-label">Counterparty</div><div class="tx-field-value od-value-row">BNP Paribas ${CHEVRON_ICON}</div></div>
+        <div><div class="tx-field-label">Counterparty</div><div class="tx-field-value od-value-row">TBN Bank ${CHEVRON_ICON}</div></div>
         <div><div class="tx-field-label">User</div><div class="tx-field-value">Dinesh KERAI</div></div>
         <div><div class="tx-field-label">Channel</div><div class="tx-field-value">${t.channel}</div></div>
         <div class="full"><div class="tx-field-label">Comment</div><div class="tx-field-value od-placeholder">—</div></div>
@@ -4165,14 +4165,14 @@ function pbRow(o){
   };
 }
 const PB_ROWS = [
-  { id:'pb01', t:'15:31:20', status:'Executed', name:'iShares Core MSCI World UCITS ETF (Acc)', card:'iShares MSCI World', ticker:'IWDA', asset:'ETF', side:'buy', qty:2500, unit:'units', px:128.54, dp:2, ccy:'EUR', feeBps:15, isin:'IE00B4L5Y983', venue:'Euronext Amsterdam', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'CH-4471 · Family Office', mandate:'Balanced (Discretionary)', risk:'Moderate', suit:'Passed', rm:'C. DUBOIS', instr:'Rebalance to target', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-IWD-7731-0925' },
+  { id:'pb01', t:'15:31:20', status:'Executed', name:'iShares Core MSCI World UCITS ETF (Acc)', card:'iShares MSCI World', ticker:'IWDA', asset:'ETF', side:'buy', qty:2500, unit:'units', px:128.54, dp:2, ccy:'EUR', feeBps:15, isin:'IE00B4L5Y983', venue:'Euronext Amsterdam', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'CH-4471 · Family Office', mandate:'Balanced (Discretionary)', risk:'Moderate', suit:'Passed', rm:'C. DUBOIS', instr:'Rebalance to target', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-IWD-7731-0925' },
   { id:'pb02', t:'15:12:05', status:'Executed', name:'Gold Spot (XAU/USD)', card:'Gold (XAU/USD)', ticker:'XAU', asset:'Precious Metal', side:'buy', qty:50, unit:'oz', px:4342.34, dp:2, ccy:'USD', feeBps:25, isin:'—', venue:'OTC London (LBMA)', tif:'Immediate', settle:'25-Sept-2026 (T+2)', client:'LU-2208 · Private Client', mandate:'Advisory', risk:'Conservative', suit:'Passed', rm:'M. ROSSI', instr:'Client call-in', custody:'Allocated — Zurich vault', cashAcct:'USD ••• 2208-03', orderId:'PB-XAU-5520-0925', comment:'Hedge vs. USD rate path after Fed hike' },
-  { id:'pb03', t:'14:58:44', status:'Partially Filled', filled:250, name:'SAP SE', ticker:'SAP', asset:'Equity', side:'buy', qty:400, unit:'shares', px:182.32, limit:183.00, dp:2, ccy:'EUR', feeBps:20, isin:'DE0007164600', venue:'Xetra', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'CH-4471 · Family Office', mandate:'Growth (Advisory)', risk:'Balanced', suit:'Passed', rm:'C. DUBOIS', instr:'Ahead of Q3 results (21-Oct)', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-SAP-3309-0925' },
-  { id:'pb04', t:'14:36:10', status:'Working', filled:0, name:'LVMH Moët Hennessy Louis Vuitton', card:'LVMH', ticker:'MC', asset:'Equity', side:'sell', qty:150, unit:'shares', px:403.10, limit:405.00, dp:2, ccy:'EUR', feeBps:20, isin:'FR0000121014', venue:'Euronext Paris', tif:'GTC', settle:'25-Sept-2026 (T+2)', client:'FR-9015 · Private Client', mandate:'Advisory', risk:'Balanced', suit:'Passed', rm:'S. LAURENT', instr:'Trim luxury exposure', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 9015-02', orderId:'PB-LVM-6124-0925' },
-  { id:'pb05', t:'14:20:57', status:'Pending', filled:0, name:'ASML Holding N.V.', card:'ASML', ticker:'ASML', asset:'Equity', side:'buy', qty:40, unit:'shares', px:1507.40, limit:1480.00, dp:2, ccy:'EUR', feeBps:20, isin:'NL0010273215', venue:'Euronext Amsterdam', tif:'GTD 30-Sept-2026', settle:'T+2', client:'CH-4471 · Family Office', mandate:'Growth (Advisory)', risk:'Balanced', suit:'Pending review', rm:'C. DUBOIS', instr:'Buy on dip', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-ASM-8840-0925', comment:'Awaiting 4-eyes suitability sign-off' },
+  { id:'pb03', t:'14:58:44', status:'Partially Filled', filled:250, name:'SAP SE', ticker:'SAP', asset:'Equity', side:'buy', qty:400, unit:'shares', px:182.32, limit:183.00, dp:2, ccy:'EUR', feeBps:20, isin:'DE0007164600', venue:'Xetra', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'CH-4471 · Family Office', mandate:'Growth (Advisory)', risk:'Balanced', suit:'Passed', rm:'C. DUBOIS', instr:'Ahead of Q3 results (21-Oct)', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-SAP-3309-0925' },
+  { id:'pb04', t:'14:36:10', status:'Working', filled:0, name:'LVMH Moët Hennessy Louis Vuitton', card:'LVMH', ticker:'MC', asset:'Equity', side:'sell', qty:150, unit:'shares', px:403.10, limit:405.00, dp:2, ccy:'EUR', feeBps:20, isin:'FR0000121014', venue:'Euronext Paris', tif:'GTC', settle:'25-Sept-2026 (T+2)', client:'FR-9015 · Private Client', mandate:'Advisory', risk:'Balanced', suit:'Passed', rm:'S. LAURENT', instr:'Trim luxury exposure', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 9015-02', orderId:'PB-LVM-6124-0925' },
+  { id:'pb05', t:'14:20:57', status:'Pending', filled:0, name:'ASML Holding N.V.', card:'ASML', ticker:'ASML', asset:'Equity', side:'buy', qty:40, unit:'shares', px:1507.40, limit:1480.00, dp:2, ccy:'EUR', feeBps:20, isin:'NL0010273215', venue:'Euronext Amsterdam', tif:'GTD 30-Sept-2026', settle:'T+2', client:'CH-4471 · Family Office', mandate:'Growth (Advisory)', risk:'Balanced', suit:'Pending review', rm:'C. DUBOIS', instr:'Buy on dip', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 4471-01', orderId:'PB-ASM-8840-0925', comment:'Awaiting 4-eyes suitability sign-off' },
   { id:'pb06', t:'13:44:31', status:'Executed', name:'Gold Spot (XAU/USD)', card:'Gold (XAU/USD)', ticker:'XAU', asset:'Precious Metal', side:'sell', qty:20, unit:'oz', px:4358.80, dp:2, ccy:'USD', feeBps:25, isin:'—', venue:'OTC London (LBMA)', tif:'Immediate', settle:'25-Sept-2026 (T+2)', client:'MC-0712 · Private Client', mandate:'Discretionary', risk:'Moderate', suit:'Passed', rm:'M. ROSSI', instr:'Take profit', custody:'Allocated — Zurich vault', cashAcct:'USD ••• 0712-01', orderId:'PB-XAU-5498-0925' },
-  { id:'pb07', t:'11:15:02', status:'Cancelled', name:'iShares Core MSCI World UCITS ETF (Acc)', card:'iShares MSCI World', ticker:'IWDA', asset:'ETF', side:'sell', qty:1000, unit:'units', px:128.54, limit:130.00, dp:2, ccy:'EUR', feeBps:15, isin:'IE00B4L5Y983', venue:'Euronext Amsterdam', tif:'Day', settle:'—', client:'FR-9015 · Private Client', mandate:'Advisory', risk:'Balanced', suit:'Passed', rm:'S. LAURENT', instr:'Client withdrew', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 9015-02', orderId:'PB-IWD-7702-0925' },
-  { id:'pb08', t:'10:02:18', status:'Executed', name:'SAP SE', ticker:'SAP', asset:'Equity', side:'sell', qty:300, unit:'shares', px:182.86, dp:2, ccy:'EUR', feeBps:20, isin:'DE0007164600', venue:'Xetra', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'MC-0712 · Private Client', mandate:'Discretionary', risk:'Moderate', suit:'Passed', rm:'M. ROSSI', instr:'Reduce single-stock weight', custody:'BNP Paribas Securities Services', cashAcct:'EUR ••• 0712-01', orderId:'PB-SAP-3291-0925' }
+  { id:'pb07', t:'11:15:02', status:'Cancelled', name:'iShares Core MSCI World UCITS ETF (Acc)', card:'iShares MSCI World', ticker:'IWDA', asset:'ETF', side:'sell', qty:1000, unit:'units', px:128.54, limit:130.00, dp:2, ccy:'EUR', feeBps:15, isin:'IE00B4L5Y983', venue:'Euronext Amsterdam', tif:'Day', settle:'—', client:'FR-9015 · Private Client', mandate:'Advisory', risk:'Balanced', suit:'Passed', rm:'S. LAURENT', instr:'Client withdrew', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 9015-02', orderId:'PB-IWD-7702-0925' },
+  { id:'pb08', t:'10:02:18', status:'Executed', name:'SAP SE', ticker:'SAP', asset:'Equity', side:'sell', qty:300, unit:'shares', px:182.86, dp:2, ccy:'EUR', feeBps:20, isin:'DE0007164600', venue:'Xetra', tif:'Day', settle:'25-Sept-2026 (T+2)', client:'MC-0712 · Private Client', mandate:'Discretionary', risk:'Moderate', suit:'Passed', rm:'M. ROSSI', instr:'Reduce single-stock weight', custody:'TBN Bank Securities Services', cashAcct:'EUR ••• 0712-01', orderId:'PB-SAP-3291-0925' }
 ].map(pbRow);
 
 /* ---------- EQUITIES (institutional cash & index futures) ----------
@@ -4203,7 +4203,7 @@ function eqRow(o){
           ['Slippage vs Arrival', `${bFmt(slip,1)} <span class="od-sub">bp ${slip >= 0 ? 'cost' : 'saving'}</span>`], ['% of ADV', `${o.adv}%`],
           ['Executed Notional', `${bFmt(notional,0)} <span class="od-sub">${o.ccy}</span>`, true] ]},
         { title:'Booking', fields:[
-          ['Account', o.account], ['Counterparty', 'BNP Paribas'], ['Trader', o.trader], ['Commission', `${o.comm} <span class="od-sub">bp</span>`],
+          ['Account', o.account], ['Counterparty', 'TBN Bank'], ['Trader', o.trader], ['Commission', `${o.comm} <span class="od-sub">bp</span>`],
           ['Settlement', o.mult > 1 ? 'Daily variation margin (Eurex Clearing)' : '25-Sept-2026 (T+2)', true] ]}
       ],
       panel:{ title:`${o.side === 'buy' ? 'Bought' : 'Sold'} ${bInt(o.filled)} of ${bInt(o.qty)} ${unit}`, lines:[`Remaining: ${bInt(o.qty - o.filled)}`, `Order Time: 23-Sept-2026 ${o.t} Local`], progress: o.status === 'Cancelled' ? null : pct, buttons: working }
@@ -4261,8 +4261,8 @@ function orRow(o){
           ['Fill', `<span class="od-pill-toggle">${o.aon ? '<span class="od-pill active">All or Nothing</span> Partial Fill' : 'All or Nothing <span class="od-pill active">Partial Fill</span>'}</span>`, true],
           ['Expiry', `<span class="od-value-row"><span class="od-checkbox"></span>${o.expiry}</span>`], ['Link Type', o.link || '<span class="od-placeholder">None</span>'] ]},
         { title:'Booking', fields:[
-          ['Account', `<span class="od-value-row">BNP Arbitrage (BNABPAR) ${CHEVRON_ICON}</span>`, true],
-          ['Sub Account', `<span class="od-value-row">B2B - None ${CHEVRON_ICON}</span>`], ['Trading Entity', `<span class="od-value-row">BNP Paribas ${CHEVRON_ICON}</span>`],
+          ['Account', `<span class="od-value-row">TBN Arbitrage (TBNBPAR) ${CHEVRON_ICON}</span>`, true],
+          ['Sub Account', `<span class="od-value-row">B2B - None ${CHEVRON_ICON}</span>`], ['Trading Entity', `<span class="od-value-row">TBN Bank ${CHEVRON_ICON}</span>`],
           ['Comment', o.comment || '<span class="od-placeholder">—</span>', true],
           ['Client Reference', `<span class="od-value-row od-placeholder">Specify Client Reference ${CHEVRON_ICON}</span>`, true],
           ['Book', `<span class="od-value-row"><span style="background:#dc2626;color:#fff;font-size:10px;font-weight:800;letter-spacing:.06em;padding:3px 8px;border-radius:5px;">FORT ⓘ</span> PARBPAR ${CHEVRON_ICON}</span>`, true] ]}
